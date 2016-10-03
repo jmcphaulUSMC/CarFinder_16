@@ -1,0 +1,12 @@
+/bower_components
+/node_modules
+/*.user
+/wwwroot/trNgGrid.css
+/wwwroot/trNgGrid.js
+/.vs
+/project.lock.json
+/bin
+/obj
+/sample/sample-bundle.js
+/sample/fonts
+/sample/sample-bundle.css

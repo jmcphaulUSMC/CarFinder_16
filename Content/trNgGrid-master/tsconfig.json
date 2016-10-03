@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "umd",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "sourceMap": false,
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules",
+    "bower_modules",
+    "typings",
+    "wwwroot"
+  ]
+}

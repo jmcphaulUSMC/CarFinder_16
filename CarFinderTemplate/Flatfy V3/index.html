@@ -1,0 +1,267 @@
+﻿ <!-- FlatFy Theme - Andrea Galanti /-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Flatfy Free Flat and Responsive HTML5 Template ">
+    <meta name="author" content="">
+
+    <title>Flatfy – Free Flat and Responsive HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Google Web Font -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS-->
+    <link href="css/general.css" rel="stylesheet">
+
+    <!-- Owl-Carousel -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <script src="js/modernizr-2.8.3.min.js"></script>  <!-- Modernizr /-->
+    <!--[if IE 9]>
+        <script src="js/PIE_IE9.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/PIE_IE678.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../../CarFinderTemplate/js/modernizr.custom.js"></script>
+
+</head>
+
+<body id="home">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+
+    <!-- FullScreen -->
+    <div class="intro-header">
+        <div class="col-xs-12 text-center abcen1">
+            <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s" style="margin-top: -100px; text-align: left;">Car Finder</h1>
+            <!--<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Clean & minimal Theme</h3>-->
+        </div>
+        <!-- /.container -->
+        <div class="col-xs-12 text-center abcen wow fadeIn">
+            <div class="button_down ">
+                <a class="imgcircle wow bounceInUp" data-wow-duration="1.5s" href="#whatis"> <img class="img_scroll" src="img/icon/circle.png" alt=""> </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NavBar-->
+    <nav class="navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://jmcphaul-portfolio.azurewebsites.net/">Home</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="menuItem"><a href="#whatis">About</a></li>
+                    <li class="menuItem"><a href="#contact">Car Info</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- What is -->
+    <div id="whatis" class="content-section-b" style="border-top: 0">
+        <div class="container">
+
+            <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+                <h2>About</h2>
+                <p class="lead" style="margin-top:0">About Car Finder is a fully functioning WebAPI web application. It is composed of a dynamic front-end using AngularJS, HTML5 and Twitter Bootstrap. </p>
+                <p class="lead" style="margin-top:0">It is used to search for cars by using the year, make, model, trim available. The ability to sort and filiter results makes finding your car incredibly simple!!! </p>
+                <p class="lead" style="margin-top:0">This appplication accesses the NHSA's car recall database using the provided WebAPI to how car recalls. Including images found using Bing's Search WebAPI. The applicaiton dynamically formats itself based on available content and device screen size.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="content-section-a">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+                    <h2>Contact Us</h2>
+                    <p class="lead" style="margin-top:0">A special thanks to xfb.</p>
+                </div>
+                <div ng-app="appCar">
+                    <div ng-controller="ctrAppCar">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <select ng-model="selectedYear" ng-options="year for year in years" ng-change="getMakes()" class="form-control"></select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <select ng-model="selectedMake" ng-options="make for make in makes" ng-change="getModels()" ng-disabled="selectedYear==''" class="form-control"><option value="" disabled selected ng-hide="selectedMake">Select a make...</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <select ng-model="selectedModel" ng-options="model for model in models" ng-change="getTrims()" ng-disabled="selectedMake==''" class="form-control"></select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <select ng-model="selectedTrim" ng-options="trim for trim in trims" ng-change="getCars()" ng-disabled="selectedModel==''" class="form-control"></select>
+                                        </div>
+                                    </div><br /><br />
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button class="btn btn-info" ng-click="getCars()">Get Car</button><br />
+                                        </div>
+                                    </div>
+                                    <p style="font-size:20px; color:black">{{selectedYear + " " + selectedMake  + " " + selectedModel   + " " + selectedTrim}} </p>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div style="color:black"><strong>{{cars.Recalls.Message}}</strong></div>
+
+
+                                            <div ng-repeat="result in cars.Recalls.Results" style="color:black">
+
+                                                <h3>{{result.Component}}</h3>
+                                                <div><strong>Summary: </strong>{{result.Summary}}</div>
+                                                <div><strong>Consequence: </strong> {{result.Conequence}}</div>
+                                                <div><strong>Remedy: </strong>{{result.Remedy}}</div>
+                                                <div><strong>Notes: </strong>{{result.Notes}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="container">
+                                            <div class="row">
+                                                <table class="col-md-12" id="recall-table" tr-ng-grid items="cars.Recalls.Results" page-items="5" style="color:black">
+                                                    <thead>
+                                                        <tr>
+                                                            <th field-name="ReportReceiveDate" display-name="Reported"></th>
+                                                            <th field-name="Manufacturer" display-name="Manufacturer"></th>
+                                                            <th field-name="Component" display-name="Component"></th>
+                                                            <!--<th field-name="model_trim" display-name="Trim"></th>-->
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <button class="btn btn=group-sm" ng-click="">Details</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <img ng-src="{{cars.Image}}" width="800" height="600" class="img-responsive" style="border-color:black" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9">
+
+                                    <div class="container">
+                                        <div class="row">
+                                            <table class="col-md-12" id="car-table" tr-ng-grid items="carsList" page-items="5" style="color:black">
+                                                <thead>
+                                                    <tr>
+                                                        <th field-name="model_year" display-name="Year"></th>
+                                                        <th field-name="make" display-name="Make"></th>
+                                                        <th field-name="model_name" display-name="Model"></th>
+                                                        <th field-name="model_trim" display-name="Trim"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn btn=group-sm" ng-click="">view</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src="../../Scripts/angular.min.js"></script>
+    <script src="../../Scripts/angular-resource.min.js"></script>
+    <script src="../../Scripts/angular-ui-router.js"></script>
+    <script src="../Car.js"></script>
+    <script src="../Controllers/CarController.js"></script>
+    <script src="../Services/CarServices.js"></script>
+    <script src="../../Scripts/angular-ui/ui-bootstrap.min.js"></script>-->
+
+
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/script.js"></script>
+    <!-- StikyMenu -->
+    <script src="js/stickUp.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $('.navbar-default').stickUp();
+            });
+        });
+
+    </script>
+    <!-- Smoothscroll -->
+    <script type="text/javascript" src="js/jquery.corner.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/classie.js"></script>
+    <script src="js/uiMorphingButton_inflow.js"></script>
+    <!-- Magnific Popup core JS file -->
+    <script src="js/jquery.magnific-popup.js"></script>
+</body>
+</html>

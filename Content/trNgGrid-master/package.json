@@ -1,0 +1,62 @@
+{
+  "name": "tr-ng-grid",
+  "version": "3.1.7",
+  "description": "trNgGrid is a feature rich declarative data grid based on the popular AngularJs framework and making use of plain table HTML elements.",
+  "homepage": "http://github.com/MoonStorm/trNgGrid",
+  "author": "MoonStorm <MoonStorm@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "html",
+    "table",
+    "grid"
+  ],
+  "bugs": {
+    "url": "http://github.com/MoonStorm/trNgGrid/issues"
+  },
+  "files": [
+    "trNgGrid.min.js",
+    "trNgGrid.js",
+    "trNgGrid.css",
+    "trNgGrid.min.css",
+    "LICENSE",
+    "relnotes.html",
+    "browserify.js"
+  ],
+  "main": "browserify.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/MoonStorm/trNgGrid"
+  },
+  "dependencies": {
+    "angular": "1.x"
+  },
+  "devDependencies": {
+    "es6-promise": "3.0.x",
+    "typescript": "1.x",
+    "gulp": "3.x",
+    "gulp-bump": "2.1.x",
+    "gulp-concat": "2.6.x",
+    "gulp-cssnano": "2.1.x",
+    "gulp-insert": "0.5.x",
+    "gulp-rename": "1.2.x",
+    "gulp-typescript": "2.10.x",
+    "gulp-uglify": "1.5.x",
+    "merge": "1.2.x",
+    "yargs": "4.7.x",
+
+    "browserify": "13.0.x",
+    "finalhandler": "0.4.x",
+    "serve-static": "1.10.x",
+    "vinyl-source-stream": "1.1.x",
+    "vinyl-buffer": "1.0.x",
+    "bootstrap": "3.3.x",
+    "gulp-concat-css": "2.3.x",
+    "gulp-less": "3.1.x" ,
+    "event-stream": "3.3.x",
+    "gulp-debug": "2.x" 
+  },
+  "scripts": {
+    "gulp": "gulp"
+  }
+}
